@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: "Inter";
+  src: url('../src/assets/fonts/Inter-Regular.ttf');  
+  font-weight: 400; 
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src: url('../src/assets/fonts/Montserrat-SemiBold.ttf');  
+  font-weight: 600; 
+}
+
 *{
   font-size: 1em /* 16px */;
   color:white;
@@ -17,7 +29,7 @@ body {
 
 .App{
   /* background: url('../src/assets/img/bg.jpg'); */
-  background-color: #171717;
+  background-color: 		#0f172a;
 }
 
 .hero-images img{
@@ -27,12 +39,12 @@ body {
   border-radius: 40.002px; 
 }
 
-footer{
+/* footer{
   background-color: #171717;
 }
 footer ul{
   list-style-type: "\2015";
-}
+} */
 .menu, .cart{
   transform: translateX(100%);
   transition: all 0.5s;

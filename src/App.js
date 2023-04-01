@@ -10,13 +10,17 @@ function App() {
   let [products, setProducts] = useState(initialProducts)
   function addToCart(product){
     const isItemExisting = cart.filter((p) => p.id === product.id).length !== 0 ? true : false;    
-    if (!isItemExisting) { // adding a new item to cart
+    
+    // adding a new item to cart
+    if (!isItemExisting) { 
       setCart([...cart, {
         ...product,
         qty: 1
       }])
     }
-    else { // update existing item to cart
+
+    // update existing item to cart
+    else { 
       setCart(
         cart.map((p) => {
           if (p.id === product.id) {
@@ -58,12 +62,12 @@ function App() {
             <input type={'search'} placeholder='Search' onChange={(e) => filterSearch(e.target.value)} name="search_name" className="pl-10 py-2 rounded-full placeholder:font-[Peloric] text-[black]" />
           </form>          
         </div>
-        <div className="grid grid-cols-3 w-[80%] gap-6 mx-auto text-center font-[SweetSansPro] font-medium mt-10 mb-32">
+        <div className="grid grid-cols-3 w-[80%] gap-6 mx-auto text-center font-[Montserrat] mt-10 mb-32">
           {products.map(product => {
             return (
               <div key={product.id} className="px-4 py-2 space-y-2 bg-white rounded-3xl">
                   <img src={product.imgPath} alt="" className="h-[300px] border-b-1 border-black mx-auto"/>
-                  <p className="text-[black]">{product.name}</p>
+                  <p className="text-[black] font-bold text-xl">{product.name}</p>
                   <p className="text-[black]">Php {product.price.toFixed(2)}</p>
                   <p className="text-[black]">{product.category}</p>
                   <button className="text-[black] border border-black rounded-3xl py-2 px-4" onClick={() => addToCart(product)}>ADD TO CART</button>
@@ -72,7 +76,6 @@ function App() {
           })}
         </div>
       </section>
-      {/* <Footer /> */}
     </div>
   );
 }
