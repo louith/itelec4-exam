@@ -15,7 +15,7 @@
 }
 
 *{
-  font-size: 1em /* 16px */;
+  font-size: 1em /* 16px */; 
   color:white;
 }
 body {
@@ -30,13 +30,14 @@ body {
 .App{
   /* background: url('../src/assets/img/bg.jpg'); */
   background-color: 		#0f172a;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .hero-images img{
   height: 400.02px;
   filter: grayscale(90%);
   border: 0.816367px solid #FFFFFF;
-  border-radius: 40.002px; 
+  border-radius: 40.002px;
 }
 
 /* footer{
