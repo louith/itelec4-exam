@@ -47,7 +47,10 @@ function Cart({ cart, setCart }) {
     return (
       <div id="cart" className="cart fixed top-0 right-0 w-[25%] h-full bg-[white] p-5 z-10 overflow-y-scroll">
           <div className="flex justify-between items-center mb-5">
-              <p className="text-black text-[32px]">Item Summary ({cart.length})</p>
+              <p className="text-black text-[25px] font-[Montserrat]">YOUR CART</p>
+              <div className="h-8 w-8 rounded-full bg-slate-800 text-center pt-1">
+              <p className="text-slate-100">{cart.length}</p>
+              </div>
               <i className="fa-solid fa-xmark text-[black] cursor-pointer" onClick={() => interactCart()}></i>
           </div>        
           {cart.map((product) => {
@@ -56,7 +59,7 @@ function Cart({ cart, setCart }) {
                       <div className="flex space-x-8 items-center">
                           <img src={product.imgPath} alt="" className="cart-item rounded-[20px] w-[40%]" />
                           <div className="space-y-2">
-                              <p className="text-black">{product.name}</p>
+                              <p className="text-black font-bold font-[Inter] uppercase">{product.name}</p>
                               <p className="text-black">Price: {product.price.toFixed(2)}</p>
                               <p className="text-black">Quantity:</p>
                               <div className="flex items-center space-x-4">
@@ -67,7 +70,7 @@ function Cart({ cart, setCart }) {
                           </div>
                       </div>
                       <div className="flex justify-end">
-                          <button className="border-[2px] rounded-full border-[#475467] text-black px-4 py-2" onClick={() => removeItemFromCart(product)}>Remove Item <i className="fa-solid fa-trash text-black"></i></button>
+                          <button className="border-[2px] rounded-full border-[#475467] text-black px-4 py-2" onClick={() => removeItemFromCart(product)}><i className="fa-solid fa-trash text-black"></i></button>
                       </div>
                   </div>                    
               )
@@ -77,7 +80,7 @@ function Cart({ cart, setCart }) {
               <p className="text-black text-[32px]">Php {totalPrice.toFixed(2)}</p>
           </div>
           <div className="flex justify-center">
-              <button className="w-[80%] py-2 font-[SweetSansPro] text-black text-center border-[1px] border-[#0A4508] rounded-full" onClick={() => alert('Checkout Successful!')}>CHECKOUT</button>
+              <button className="w-[80%] py-2 text-black text-center border-[1px] border-[#0A4508] rounded-full" onClick={() => alert('Checkout Successful!')}>CHECKOUT</button>
           </div>
           
       </div>   
