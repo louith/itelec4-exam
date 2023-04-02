@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 import { useLocalStorage } from 'usehooks-ts'
 import initialProducts from "./data";
@@ -54,7 +53,6 @@ function App() {
   return (
     <div className="App">
       <Navbar cart={cart} />
-      <Menu />
       <Cart cart={cart} setCart={setCart} />
 
       <div className="flex justify-end items-center space-x-6 mr-8 mt-8">
@@ -66,34 +64,38 @@ function App() {
 
       <section>
       <div class="w-screen h-screen pt-16">
-<div class="flex flex-row text-amber-200 ml-24">
-    <div class="">
-        <p class="font-heading_2 text-3xl  pl-28">EXUDE YOUR</p>
-        <div class="flex flex-row">
-            <p class="font-heading_2 text-4xl  italic">Personality</p>
-            <p class="font-heading_2 text-3xl pl-4 pt-2">&</p>
-            <p class="font-heading_2 text-4xl italic pl-4">Charm</p>
-        </div> 
-        <div class="flex flex-row">
-            <p class="font-heading_2 text-3xl pt-2  pl-4">WITH</p>
-            <p class="font-heading_2 text-4xl italic pl-4">Stud Earrings</p>
+        <div class="flex flex-row text-amber-200 ml-24">
+            <div class="">
+                <p class="font-heading_2 text-3xl  pl-28">EXUDE YOUR</p>
+                <div class="flex flex-row">
+                    <p class="font-heading_2 text-4xl  italic">Personality</p>
+                    <p class="font-heading_2 text-3xl pl-4 pt-2">&</p>
+                    <p class="font-heading_2 text-4xl italic pl-4">Charm</p>
+                </div> 
+                <div class="flex flex-row">
+                    <p class="font-heading_2 text-3xl pt-2  pl-4">WITH</p>
+                    <p class="font-heading_2 text-4xl italic pl-4">Stud Earrings</p>
+                </div>
+
+            </div>
+            
+            <div class="h-1/3 w-1/3 ml-8">
+                <img 
+                src={home_pic}/>
+            </div>
+
+            <div class="h-96 w-52 mt-12 object-contain ml-20 flex flex-row items-end">
+                <p class="font-normal">An inspirational jewelry brand symbolizing elegance &amp;  self-belief accentuating unique traits that make you YOU.</p>
+            </div>
+            
         </div>
-
-    </div>
-    
-    <div class="h-1/3 w-1/3 ml-8">
-        <img 
-        src={home_pic}/>
-    </div>
-
-    <div class="h-96 w-52 mt-12 object-contain ml-20 flex flex-row items-end">
-        <p class="font-normal">An inspirational jewelry brand symbolizing elegance &amp;  self-belief accentuating unique traits that make you YOU.</p>
-    </div>
-    
-</div>
-
       </div>
       </section>
+
+     
+        <div className="flex flex-col items-center rotate-2">
+          <p className="text-5xl font-[Montserrat] py-4 px-16 place-self-center bg-white text-slate-900 w-1/3">   SHOP NOW</p>
+        </div>
 
       {/* products display */}
       <section className="catalog px-20 mt-8">

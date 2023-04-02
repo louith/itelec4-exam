@@ -75,12 +75,12 @@ function Cart({ cart, setCart }) {
                   </div>                    
               )
           })}
-          <div className="border-t-[1px] my-7 border-black flex justify-between font-[SweetSansPro]">
-              <p className="text-black text-[32px]">Total:</p>
-              <p className="text-black text-[32px]">Php {totalPrice.toFixed(2)}</p>
+          <div className="border-t-[1px] my-7 border-black flex justify-between font-[Montserrat]">
+              <p className="text-black text-[25px]">Total:</p>
+              <p className="text-black text-[25px]">Php {totalPrice.toFixed(2)}</p>
           </div>
           <div className="flex justify-center">
-              <button className="w-[80%] py-2 text-black text-center border-[1px] border-[#0A4508] rounded-full" onClick={() => alert('Checkout Successful!')}>CHECKOUT</button>
+              <button className="w-[80%] py-2 text-black text-center border-[1px] border-[#0A4508] rounded-full" onClick={() => alert('Checkout Successful!')}>PROCEED TO CHECKOUT</button>
           </div>
           
       </div>   
